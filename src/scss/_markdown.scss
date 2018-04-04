@@ -1,0 +1,67 @@
+// Markdown
+// -------------------------------------------------------------------
+// The little markings, such as the asterisks around italics
+.mark,
+.link-url {
+    color: $light-gray;
+}
+
+// Make headings the same size as everything else
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1rem;
+    position: relative;
+}
+
+h1::before {
+    content: "#";
+    position: absolute;
+    left: -15px;
+}
+
+h2::before {
+    content: "##";
+    position: absolute;
+    left: -25px;
+}
+
+h3::before {
+    content: "###";
+    position: absolute;
+    left: -35px;
+}
+
+h4::before {
+    content: "####";
+    position: absolute;
+    left: -45px;
+}
+
+h5::before {
+    content: "#####";
+    position: absolute;
+    left: -55px;
+}
+
+h6::before {
+    content: "######";
+    position: absolute;
+    left: -65px;
+}
+
+// https://stackoverflow.com/questions/3200249/html-list-style-type-dash
+ul.dashed {
+  list-style-type: none;
+  padding-left: $space-1;
+}
+ul.dashed > li {
+  text-indent: -5px;
+}
+ul.dashed > li:before {
+  content: "- ";
+  text-indent: -5px;
+}
